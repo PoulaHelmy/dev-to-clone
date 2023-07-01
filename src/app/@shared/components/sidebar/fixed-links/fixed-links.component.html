@@ -1,0 +1,48 @@
+<nav>
+  <ul class="links-list-container">
+    <ng-container *ngFor="let link of mainFixedLinks">
+      <li>
+        <a href="{{link.route}}">
+            <span class="sidebar-link-icon">
+              <svg height="24" viewBox="0 0 44 44" width="24">
+                <use [attr.xlink:href]="'#'+ link.icon"></use>
+              </svg>
+            </span>
+          {{link.label}}
+        </a>
+      </li>
+    </ng-container>
+  </ul>
+</nav>
+<nav>
+  <h2 class="nav-title">
+    Other
+  </h2>
+  <ul class="links-list-container">
+    <ng-container *ngFor="let link of otherFixedLinks">
+      <li>
+        <a href="{{link.route}}">
+            <span class="sidebar-link-icon">
+              <svg height="24" viewBox="0 0 44 44" width="24">
+                <use [attr.xlink:href]="'#'+ link.icon"></use>
+              </svg>
+            </span>
+          {{link.label}}
+        </a>
+      </li>
+    </ng-container>
+  </ul>
+</nav>
+<nav>
+  <ul class="links-list-container social-media">
+    <ng-container *ngFor="let link of socialMediaLinks">
+      <li>
+        <a href="{{link.route}}" rel="noopener me" target="_blank">
+          <svg height="24" viewBox="0 0 44 44" width="24">
+            <use [attr.xlink:href]="'#'+ link.icon"></use>
+          </svg>
+        </a>
+      </li>
+    </ng-container>
+  </ul>
+</nav>

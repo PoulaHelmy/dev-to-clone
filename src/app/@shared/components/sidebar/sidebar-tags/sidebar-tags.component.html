@@ -1,0 +1,17 @@
+<nav class="tags-container">
+  <div class="title">
+    <h2>My Tags</h2>
+    <a href="/dashboard/following_tags" rel="noopener me" target="_blank">
+      <svg height="24" viewBox="0 0 44 44" width="24">
+        <use [attr.xlink:href]="'#svg-tags-setting'"></use>
+      </svg>
+    </a>
+  </div>
+  <div class="body">
+    <div class="content">
+      <ng-container *ngFor="let tag of tags$|async">
+        <a class="c-link c-link--block" href="{{'/t/'+tag.name}}" title="webdev tag">#{{tag.name}}</a>
+      </ng-container>
+    </div>
+  </div>
+</nav>
